@@ -2,43 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js"></script>
+
+  <title>Tip calculator app | Frontend Mentor </title>
+
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
+  <header>
+    <img src="./images/logo.svg" alt="spliter">
+  </header>
+  <main>
+    <form class="input-sec">
 
-  Bill
+        <div class="">
+          <div class="para">
+            <label for="bill-amount" class="input-sec--para">Bill</label>
+            <p class="input-amount-err error-para"></p>
+          </div>
+          <input
+            type="number"
+            id="amount"
+            name="bill-amount"
+            min="1"
+            placeholder="00.00"
+            class="input-amount"
+          >
+        </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+        <div class="">
+          <label for="tip-percentage" class="input-sec--para">Select Tip %</label>
+          <div class="sec-percentage-btns">
+            <button type="button" name="tip-percentage" class="percentage-btn" data-percentage = "5">5%</button>
+            <button type="button" name="tip-percentage" class="percentage-btn" data-percentage = "10">10%</button>
+            <button type="button" name="tip-percentage" class="percentage-btn" data-percentage = "15">15%</button>
+            <button type="button" name="tip-percentage" class="percentage-btn" data-percentage = "25">25%</button>
+            <button type="button" name="tip-percentage" class="percentage-btn" data-percentage = "50">50%</button>
+            <input type="number" name="tip-percentage" class="custom-percentage" placeholder="Custom" min="1">
+          </div>
+        </div>
 
-  Number of People
+        <div class="">
+          <div class="para">
+            <label for="" class="input-sec--para">Number of People</label>
+            <p class="input-people-err error-para"></p>
+          </div>
+          <input type="number" name="people" id="no-people" class="input-people" value="1" min="1">
+        </div>
+    </form>
 
-  Tip Amount
-  / person
+      <div class="render-sec">
 
-  Total
-  / person
+        <div class="render-sec--display">
+          <div class="">
+            <p class="render-sec--para">Tip Amount</p>
+            <p class="render-sec--person">/ person</p>
+          </div>
+          <div class="tip-amount"></div>
+        </div>
 
-  Reset
-  
+
+        <div class="render-sec--display">
+          <div class="">
+            <p class="render-sec--para">Total</p>
+            <p class="render-sec--person">/ person</p>
+          </div>
+          <div class="per-person"></div>
+        </div>
+
+        <button type="button" name="button" class="reset">Reset</button>
+      </div>
+
+  </main>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a>Frontend Mentor</a>.
+    Coded by <a href="www.github.com/surya-teja-222">Surya</a>.
   </div>
 </body>
 </html>

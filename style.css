@@ -1,0 +1,236 @@
+:root{
+    --vdr-cyan: hsl(183, 100%, 15%);
+    --dgr-cyan: hsl(184, 14%, 56%);
+    --dgr-cyan-2: hsl(186, 14%, 43%);
+    --str-cyan: hsl(172, 67%, 45%);
+    --lgr-cyan: hsl(185, 41%, 84%);
+    --lgr-cyan-2: hsl(189, 41%, 97%);
+    --txt-clr-sec: hsl(0, 0%, 100%);
+  }
+  
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    cursor: default;
+  }
+  
+  body{
+    font-family: 'Space Mono', monospace;
+    background-color: hsl(185, 41%, 84%);
+  }
+  
+  button,input{
+    font-family: 'Space Mono', monospace;
+    font-size: 24px;
+    border-radius: .5rem;
+    font-weight: 700;
+    outline: none;
+    border: none;
+  }
+  
+  button:hover,
+  input:hover{
+    cursor: pointer;
+  }
+  
+  button{
+    padding: .5rem 0;
+    border: 2px solid transparent;
+  }
+  
+  button:focus{
+    border: 2px solid hsl(172, 67%, 45%);
+  }
+  
+  input{
+    -moz-appearance: textfield;
+    color: hsl(172, 67%, 45%);
+    text-align: right;
+    padding: .25rem .5rem;
+    background-color: var(--lgr-cyan-2);
+    width: 100%;
+    border: 2px solid var(--lgr-cyan-2);
+  }
+  
+  input:focus{
+    border: 2px solid hsl(172, 67%, 45%);
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input::placeholder{
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+  }
+  
+  .input-err, .input-err:focus{
+    color: hsl(355, 85%, 61%);
+    background-color: hsl(355, 85%, 91%);
+    border: solid 2px hsl(355, 85%, 61%);
+  }
+  
+  header{
+    text-align: center;
+    margin: 64px 0;
+  }
+  
+  main{
+    background: hsl(0, 0%, 100%);
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 600px;
+  }
+  
+  .para{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .error-para{
+    color: hsl(355, 85%, 61%);
+    font-weight: 700;
+    font-size: .9rem;
+  }
+  
+  .input-sec--para{
+    font-weight: 700;
+    color: var(--dgr-cyan);
+    margin-left: 1rem;
+    padding: 1rem 0;
+  }
+  
+  
+  .sec-percentage-btns{
+    font-weight: 700;
+    margin: 0 1rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto auto;
+    justify-items: stretch;
+    justify-content: space-between;
+    grid-gap: 1rem;
+  }
+  
+  .percentage-btn{
+    font-weight: 700;
+    background: var(--vdr-cyan);
+    color: var(--txt-clr-sec);
+    transition: 0.2s all linear;
+  }
+  
+  
+  .percentage-btn:hover{
+    background: hsl(172, 67%, 75%);
+    color: var(--vdr-cyan);
+  }
+  
+  .percentage-btn:active{
+    transform: scale(0.9);
+  }
+  
+  .custom-percentage{
+    text-align: center;
+    font-weight: 700;
+  }
+  
+  .percentage-btn--active{
+    background-color: var(--str-cyan);
+    color: var(--vdr-cyan);
+  }
+  
+  .input-amount{
+    background-image: url("./../images/icon-dollar.svg");
+    background-repeat: no-repeat;
+    background-size: 1.25rem;
+    background-position: left 1rem top .5rem;
+  }
+  
+  .input-people{
+    background-image: url("./../images/icon-person.svg");
+    background-repeat: no-repeat;
+    background-size: 1.5rem;
+    background-position: left 1rem top .5rem;
+  }
+  
+  .render-sec{
+    margin: 1rem .5rem;
+    padding: 2rem 1rem;
+    background: hsl(183, 100%, 15%);
+    border-radius: 1rem;
+  }
+  
+  .render-sec--display{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .render-sec--para{
+    color: var(--txt-clr-sec);
+    font-weight: 500;
+  }
+  
+  .render-sec--person{
+    color: var(--dgr-cyan);
+    font-size: 14px;
+  }
+  
+  .per-person,
+  .tip-amount{
+    font-size: 2rem;
+    color: var(--str-cyan);
+    font-weight: 700;
+  }
+  
+  .reset{
+    width: 100%;
+    margin-top: 1rem;
+    color: var(--vdr-cyan);
+    background: var(--str-cyan);
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.2s all linear;
+  }
+  
+  .reset:hover{
+    background: hsl(172, 67%, 75%);
+  }
+  .reset:active{
+    transform: scale(0.9);
+  }
+  @media (min-width: 700px) {
+    header{
+      margin: 2.5rem 0;
+    }
+    main{
+      display: flex;
+      max-width: 900px;
+      padding: .5rem 1rem;
+    }
+    main>*{
+      width: 100%;
+    }
+  
+    .input-sec{
+      margin-right: 1rem;
+      margin-bottom: 2rem;
+    }
+  
+    .render-sec{
+      position: relative;
+    }
+  
+    .render-sec--display + .render-sec--display{
+      margin-top: 2rem;
+    }
+    .reset{
+      position: absolute;
+      bottom: 1rem;
+      width: calc(100% - 2rem);
+    }
+  }
